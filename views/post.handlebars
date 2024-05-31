@@ -1,0 +1,52 @@
+<header>
+  <h2>{{post.title}}</h2>
+  <p>Posted by {{post.user.username}} on {{format_date post.createdAt}}</p>
+  <p>{{post.text}}</p>
+</header>
+
+<div class="comments-container">
+  {{#each post.comments as |comment|}} 
+    {{> comment}}
+  {{/each}} 
+</div>
+
+{{#if logged_in}}
+  <!-- Button to trigger new comment form -->
+  <button class="new-comment-btn" type="button">New Comment</button>
+
+  <!-- New comment form container -->
+  <div title="{{post.id}}" class="new-comment-container" style="display: none">
+    <h2>New Comment</h2>
+    <form class="form comment-form">
+      <div class="form-group">
+        <label for="new-comment-text">Text:</label>
+        <input class="form-input" type="text" id="new-comment-text" />
+      </div>
+      <div class="form-group">
+        <button class="post-comment-btn btn btn-primary" type="submit">Post!</button>
+        <button class="close-comment-btn btn btn-primary" type="button" style="background-color: red;">Close</button>
+      </div>
+    </form>
+  </div>
+{{/if}}
+
+<script src="/js/new-comment.js"></script>
+<script>
+  // Function to display the new comment form
+  const newCommentRender = async (event) => {
+    document.querySelector(".new-comment-container").removeAttribute("style");
+  };
+
+  // Function to hide the new comment form
+  const closeNewComment = async (event) => {
+    document.querySelector(".new-comment-container").setAttribute("style", "display: none");
+  };
+
+  document
+    .querySelector('.new-comment-btn')
+    .addEventListener('click', newCommentRender);
+
+  document
+    .querySelector('.close-comment-btn')
+    .addEventListener('click', closeNewComment);
+</script>

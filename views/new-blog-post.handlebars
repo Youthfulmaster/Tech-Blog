@@ -1,0 +1,19 @@
+{{#if logged_in}}   
+  <h2>New Post</h2>
+
+  <form class="form post-form">
+    <div class="form-group">
+      <label for="new-post-title">Title:</label>
+      <input class="form-input" type="text" id="new-post-title" />
+    </div>
+    <div class="form-group">
+      <label for="new-post-text">Text:</label>
+      <input class="form-input" type="text" id="new-post-text" />
+    </div>
+    <div class="form-group">
+      <button class="post-btn btn btn-primary" type="submit">Post!</button>
+    </div>
+  </form>
+
+  <script src="/js/new-post.js"></script>
+{{/if}}

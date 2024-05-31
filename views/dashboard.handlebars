@@ -1,0 +1,22 @@
+{{#if logged_in}}
+
+  <!-- Loop over each object in the Post table -->
+  {{#each posts as |post|}}
+    {{> blog-post-preview-dashboard}}
+  {{/each}}
+
+  <!-- Button to create a new post -->
+  <button class="new-post-btn" type="button">New Post!</button>
+
+  <!-- Script to handle the new post button click event -->
+  <script>
+    const newPostRedirect = async (event) => {
+      document.location.replace('/new-post');
+    }
+
+    document
+      .querySelector('.new-post-btn')
+      .addEventListener('click', newPostRedirect);
+  </script>
+
+{{/if}}
