@@ -1,0 +1,27 @@
+[
+  {
+    "title": "An exciting new Post",
+    "text": "Clickbait",
+    "user_id": 1
+  },
+  {
+    "title": "Moving to a new city",
+    "text": "Find a beautiful place to settle down",
+    "user_id": 2
+  },
+  {
+    "title": "Development Woes",
+    "text": "Apps are complicated",
+    "user_id": 3
+  }, 
+  {
+    "title": "Using Handlebars",
+    "text": "Apps are complicated",
+    "user_id": 2
+  },
+    {
+    "title": "Pass relevant variables to their appropriate template engine",
+    "text": "For Handlebars, ensure that you include variables of interest to the template such as `logged_in`",
+    "user_id": 2
+  }
+]

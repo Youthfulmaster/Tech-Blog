@@ -1,22 +1,50 @@
-{{#if logged_in}}
+<div class="container">
+  <div class="row">
+    <div class="col-6 offset-md-3">
+      <form action="/new" class="nav-link active">
+        <button type="submit">Add a new post</button>
+      </form>
+    </div>
+  </div>
+  
+  <br/><br/>
+  
+  <div class="card">
+    <div class="card-header">
+      <h3>Your Current Posts</h3>
+    </div>
+  </div>
 
-  <!-- Loop over each object in the Post table -->
   {{#each posts as |post|}}
-    {{> blog-post-preview-dashboard}}
+    <div class="card">
+      <div class="card-body">
+        <a href="/post/{{post.id}}">{{post.title}}</a> on {{post.date_created}}
+      </div>
+    </div>
   {{/each}}
 
-  <!-- Button to create a new post -->
-  <button class="new-post-btn" type="button">New Post!</button>
+ 
+  <div class="row">
+    <div class="col-6 offset-md-3">
+      <form class="form new-post-form">
+        <div class="form-group">
+          <label for="post-title" class="form-label">Title:</label>
+          <input class="form-input form-control" type="text" id="post-title" />
+        </div>
+        <div class="form-group">
+          <label for="post-content" class="form-label">Post Text:</label>
+          <textarea class="form-input form-control" type="text" max-length="250" id="post-content"></textarea>
+        </div>
+        <br/>
+        <div class="form-group">
+          <button class="btn btn-primary" type="submit">Post</button>
+        </div>
+      </form>
+    </div>
+  </div>
 
-  <!-- Script to handle the new post button click event -->
-  <script>
-    const newPostRedirect = async (event) => {
-      document.location.replace('/new-post');
-    }
 
-    document
-      .querySelector('.new-post-btn')
-      .addEventListener('click', newPostRedirect);
-  </script>
+</div>
 
-{{/if}}
+
+

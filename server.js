@@ -46,6 +46,8 @@ app.use(express.static(path.join(__dirname, 'public'))); // Serve static files f
 app.use(routes); // Use routes from the controllers
 
 // Sync database and start server
-sequelize.sync({ force: false }).then(() => {
+sequelize.sync({ force: true }).then(() => {
   app.listen(PORT, () => console.log(`Now listening on port ${PORT}`));
+}).catch(err => {
+  console.error('Unable to sync the database:', err);
 });

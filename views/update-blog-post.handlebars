@@ -1,14 +1,19 @@
-{{#if logged_in}}   
+{{#if logged_in}}
   <h2>Update Post</h2>
 
   <form class="form update-post-form">
-    <h3>{{post.title}}</h3>
+    <div class="form-group">
+      <label for="update-post-title">Title:</label>
+      <input class="form-input" type="text" id="update-post-title" value="{{title}}" />
+    </div>
     <div class="form-group">
       <label for="update-post-text">Text:</label>
-      <input class="form-input" type="text" id="update-post-text" placeholder="{{post.text}}" />
+      <input class="form-input" type="text" id="update-post-text" value="{{content}}" />
     </div>
     <div class="form-group">
-      <button name="{{post.id}}" class="submit-update-btn btn btn-primary" type="submit">Update!</button>
+      <button class="submit-update-btn btn btn-primary" type="submit" name="{{id}}">Update!</button>
     </div>
   </form>
+
+  <script src="/js/update-post.js"></script>
 {{/if}}

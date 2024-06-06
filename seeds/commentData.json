@@ -1,0 +1,18 @@
+[
+  {"text": "Absolutely agree! I would love to live somewhere familiar, but different enough to explore",
+  "user_id": 2,
+  "post_id": 2
+  }, 
+  {"text": "They are! Being a full-stack developer, you have to manage so many files!",
+  "user_id": 1,
+  "post_id": 3 
+  },
+  {"text": "I wish I knew this earlier. The lack of errors made this particularly difficult to diagnose",
+  "user_id": 1,
+  "post_id": 5 
+  },
+  {"text": "I know! I wish they did more",
+  "user_id": 2,
+  "post_id": 5
+  }
+]
