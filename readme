@@ -1,0 +1,8 @@
+Description
+This project is a CMS-style blog website where users can create an account, log in, and create, update, or delete blog posts. Users can also view existing blog posts and leave comments on them. The website features a navigation system that includes links to the homepage, dashboard, and login/logout options.
+
+Features
+Homepage: Displays existing blog posts, if any. Navigation links for the homepage and dashboard, and the option to log in are available.
+Sign Up/Login: Users can sign up by creating a username and password. Returning users can log in with their credentials.
+Dashboard: Once logged in, users can see their own blog posts and have the option to add new posts.
+Blog Posts: Users can create, read, update, and delete their own blog posts. They can also view and comment on
